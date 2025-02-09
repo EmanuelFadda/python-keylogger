@@ -26,7 +26,7 @@ When *client.py* process starts, it creates a TCP connection with the server and
 
 <br>
 
-> *server.py* at the moment (9/12/25) can handle a single tcp connection, and the connection is not encrypted.    
+> *server.py* at the moment (v1.0) can handle a single tcp connection, and the connection is not encrypted.    
 
 ### Get started! 💥
 
