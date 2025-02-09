@@ -1,9 +1,9 @@
 # python-keylogger
 
-## What is a keylogger?
+## What is a keylogger? :tea:
 <p>A keylogger is a software capable of monitoring every action happening in your keyboard, pressing, release etc.. and register these action in your computer (using a file) or can be shared directly with the attacker (for example opening a connection between your machine and the attacker machine). This type of malware is used by attackers to steal your information, every word pressed can be useful to give them access of your online research,passwords,email,cell numbers and other more.</p>  
 
-## Description of *python-keylogger* 
+## Description of *python-keylogger* :alien:
 <p>
 This project is used to simulate a keylogger attack in your local network. This can be useful to learn how keylogger's attacks works.
 </p>
@@ -28,34 +28,32 @@ When *client.py* process starts, it creates a TCP connection with the server and
 
 > *server.py* at the moment (9/12/25) can handle a single tcp connection, and the connection is not encrypted.    
 
-### Get started!  
+### Get started! 💥
 
 Run the server first:
 ```
-#change the directory, and run
 cd KeyLoggerServer
 python server.py
 ```
+..or directly
 ```
-# or directly
 python KeyLoggerServer/server.py
 ```
 Then run the client:
 
 ```
-# change the directory, and run
 cd KeyLoggerClient
 python client.py
 ```
+..or directly
 ```
-# or directly
 python KeyLoggerClient/client.py
 ```
 
-Have fun! :)
+Have fun! :smirk:
 
-## How to prevents this type of attack 
+## How to prevents this type of attack :alien:
 ...
 
-### !!! WARNING !!!
+### :exclamation::exclamation::exclamation: WARNING :exclamation::exclamation::exclamation:
 **Don't use this project to steal other's information without their consent. Use it only for educational porpuses!**
