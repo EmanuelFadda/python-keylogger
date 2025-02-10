@@ -46,7 +46,6 @@ try:
 except:
     print("Connection lost")
     
-
 s.close()
 
 
